@@ -1,0 +1,1 @@
+Trying to code in Python - Django. This repo just consists of a simple django application.
