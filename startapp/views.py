@@ -1,4 +1,5 @@
 from django.http import Http404, HttpResponse
+from django.shortcuts import render
 import datetime
 
 def hello(request):
@@ -6,8 +7,7 @@ def hello(request):
 
 def current_dateTime(request):
     now = datetime.datetime.now()
-    html = "<html> <body> It is now %s. </body></html>" %now
-    return HttpResponse(html)
+    return render(request,'current_dateTime.html',{'current_date':now})
 
 def hours_ahead(request, offset):
     try:
